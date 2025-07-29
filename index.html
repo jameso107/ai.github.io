@@ -1,189 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The House of AI</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
+      margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #0a192f;
+      background-color: #0a192f;
       color: #ffffff;
-      scroll-behavior: smooth;
-    }
-    .video-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      z-index: -1;
-      object-fit: cover;
-      filter: brightness(0.3);
     }
     header {
-      text-align: center;
-      padding: 8rem 2rem;
-      position: relative;
-      z-index: 1;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-      color: #64ffda;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      color: #ccd6f6;
-    }
-    .btn-group {
-      margin-top: 2rem;
-    }
-    .btn {
-      background-color: #64ffda;
-      color: #000000;
-      padding: 0.75rem 1.5rem;
-      margin: 0 0.5rem;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      transition: background-color 0.3s ease;
-    }
-    .btn:hover {
-      background-color: #52d1b6;
-    }
-    section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-      position: relative;
-      z-index: 1;
-    }
-    h2 {
-      color: #64ffda;
-      margin-bottom: 1rem;
-    }
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-    .card {
-      background: #112240;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-    .headshot {
-      max-width: 150px;
-      border-radius: 50%;
-      animation: slideIn 2s ease;
-      box-shadow: 0 0 15px rgba(100,255,218,0.5);
-      margin: 0 auto 1rem;
-      display: block;
-    }
-    form {
       background-color: #112240;
       padding: 2rem;
-      border-radius: 8px;
-      margin-top: 2rem;
+      text-align: center;
     }
-    form input, form textarea {
-      width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border: none;
-      border-radius: 5px;
-      font-family: 'Inter', sans-serif;
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
     }
-    form button {
-      background-color: #64ffda;
-      color: #000000;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .services li {
+      margin-bottom: 0.5rem;
     }
     footer {
       text-align: center;
-      padding: 2rem;
+      padding: 1rem;
       background-color: #112240;
       font-size: 0.9rem;
-      z-index: 1;
-      position: relative;
     }
-    @keyframes slideIn {
-      from {opacity: 0; transform: scale(0.5);}
-      to {opacity: 1; transform: scale(1);}
+    .contact {
+      background-color: #172a45;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-top: 2rem;
     }
-    a, a:visited {
+    a {
       color: #64ffda;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <video autoplay muted loop class="video-background">
-    <source src="waves.mov" type="video/mp4">
-  </video>
-
   <header>
     <h1>The House of AI</h1>
-    <p>Strategic AI Advisory for Small & Midsize Businesses</p>
-    <div class="btn-group">
-      <a href="#contact" class="btn">Get a Quote</a>
-      <a href="#services" class="btn">Learn More</a>
-    </div>
   </header>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
-      <img src="headshot.jpg" alt="James Oosterhouse" class="headshot" style="flex-shrink: 0;" />
-      <div style="flex: 1; min-width: 250px;">
-        <p>Founded by James Oosterhouse, a robotics engineer and AI strategist at the University of Michigan, The House of AI specializes in practical and ethical implementation of artificial intelligence. James blends deep technical knowledge with real-world consulting and automation experience to deliver value at every stage of AI adoption.</p>
-      </div>
-    </div>
-  </section>
+  <section>
+    <h2>About</h2>
+    <p>I am a passionate advocate for artificial intelligence and your ideal advisor in unlocking its potential. I help businesses harness AI to become smarter, faster, and future-ready.</p>
 
-  <section id="services">
     <h2>Services</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>AI Audit</h3>
-        <p>We evaluate your current workflows to find where AI and automation can create the most value.</p>
-      </div>
-      <div class="card">
-        <h3>AI Training</h3>
-        <p>We deliver hands-on training and tools that help your team integrate AI into their everyday work.</p>
-      </div>
-      <div class="card">
-        <h3>Workflow Automation</h3>
-        <p>We build intelligent systems that automate complex, repeatable tasks like quoting, follow-ups, and review pipelines.</p>
-      </div>
-    </div>
-  </section>
+    <ul class="services">
+      <li><strong>AI Audit:</strong> Evaluate your current workflows and explore AI integration opportunities.</li>
+      <li><strong>AI Training:</strong> Equip your team with the tools and understanding to leverage AI confidently.</li>
+      <li><strong>Workflow Automation:</strong> Streamline repetitive tasks with intelligent automation strategies.</li>
+    </ul>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <form action="https://formspree.io/f/mjvnjqzj" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p style="margin-top:1rem;">Or reach out directly:<br>
-      Email: <a href="mailto:jamesoo@umich.edu">jamesoo@umich.edu</a><br>
-      Phone: <a href="tel:+16164030259">(616) 403-0259</a>
-    </p>
-      </div>
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:jamesoo@umich.edu">jamesoo@umich.edu</a></p>
+      <p>Phone: <a href="tel:+16164030259">(616) 403-0259</a></p>
     </div>
   </section>
 
