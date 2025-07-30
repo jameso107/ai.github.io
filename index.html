@@ -125,7 +125,24 @@
       font-weight: bold;
       display: inline-block;
     }
-    @keyframes shine {
+    
+.gradient-text {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(270deg, #00ffd5, #64ffda, #00ffd5, #64ffda);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 6s ease infinite;
+  display: inline-block;
+}
+@keyframes gradientShift {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+@keyframes shine {
       0% { background-position: 0% }
       100% { background-position: 200% }
     }
@@ -143,14 +160,14 @@
   <header>
     <h1>The House of AI</h1>
     <p>Strategic AI Advisory for Small & Midsize Businesses</p>
-    <div class="btn-group">
-      <a href="#contact" class="btn">Get a Quote</a>
-      <a href="#services" class="btn">Learn More</a>
-    </div>
-    
-<div style="margin-top: 3rem;">
-  <p><span class="gradient-text">The House of AI</span> helps you <span id="typed-text" class="gradient-text"></span></p>
+        
+
+<div style="margin-top: 3rem; text-align: center;">
+  <p class="gradient-text">
+    The House of AI helps you <span id="typed-text" class="gradient-text" style="font-size: 2rem;"></span>
+  </p>
 </div>
+
 
   </header>
 
