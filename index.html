@@ -6,11 +6,7 @@
   <title>The House of AI</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * {margin:0;padding:0;box-sizing:border-box;}
     body {
       font-family: 'Inter', sans-serif;
       background: #0a192f;
@@ -120,12 +116,22 @@
       z-index: 1;
       position: relative;
     }
+    .gradient-text {
+      background: linear-gradient(90deg, #00ffd5, #64ffda, #00ffd5, #64ffda);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 3s linear infinite;
+      font-weight: bold;
+      display: inline-block;
+    }
+    @keyframes shine {
+      0% { background-position: 0% }
+      100% { background-position: 200% }
+    }
     @keyframes slideIn {
       from {opacity: 0; transform: scale(0.5);}
       to {opacity: 1; transform: scale(1);}
-    }
-    a, a:visited {
-      color: #64ffda;
     }
   </style>
 </head>
@@ -141,6 +147,11 @@
       <a href="#contact" class="btn">Get a Quote</a>
       <a href="#services" class="btn">Learn More</a>
     </div>
+    
+<div style="margin-top: 3rem;">
+  <p><span class="gradient-text">The House of AI</span> helps you <span id="typed-text" class="gradient-text"></span></p>
+</div>
+
   </header>
 
   <section id="about">
@@ -183,12 +194,54 @@
       Email: <a href="mailto:jamesoo@umich.edu">jamesoo@umich.edu</a><br>
       Phone: <a href="tel:+16164030259">(616) 403-0259</a>
     </p>
-      </div>
-    </div>
   </section>
 
   <footer>
     &copy; 2025 The House of AI. All rights reserved.
   </footer>
+
+<script>
+  const phrases = ["Automate smarter.", "Train your team.", "Deploy real intelligence."];
+  let i = 0, j = 0, currentPhrase = [], isDeleting = false, isEnd = false;
+  const element = document.getElementById("typed-text");
+
+  function loop() {
+    isEnd = false;
+    element.innerHTML = currentPhrase.join("");
+
+    if (i < phrases.length) {
+      if (!isDeleting && j <= phrases[i].length) {
+        currentPhrase.push(phrases[i][j]);
+        j++;
+        element.innerHTML = currentPhrase.join("");
+      }
+
+      if (isDeleting && j <= phrases[i].length) {
+        currentPhrase.pop(phrases[i][j]);
+        j--;
+      }
+
+      if (j === phrases[i].length) {
+        isEnd = true;
+        isDeleting = true;
+      }
+
+      if (isDeleting && j === 0) {
+        currentPhrase = [];
+        isDeleting = false;
+        i++;
+        if (i === phrases.length) {
+          i = 0;
+        }
+      }
+    }
+    const spedUp = Math.random() * (80 - 50) + 50;
+    const normalSpeed = Math.random() * (150 - 100) + 100;
+    const time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed;
+    setTimeout(loop, time);
+  }
+  loop();
+</script>
+
 </body>
 </html>
