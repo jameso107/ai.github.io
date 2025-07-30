@@ -161,10 +161,12 @@
       from {opacity: 0; transform: scale(0.5);}
       to {opacity: 1; transform: scale(1);}
     }
-  
+  </style>
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 
-</style>
 </head>
 <body>
   <video autoplay muted loop class="video-background">
@@ -173,7 +175,7 @@
 
   <header>
     <h1>The House of AI</h1>
-    <p>Strategic AI Advisory for West Michigan Businesses</p>
+    <p>Strategic AI Advisory for Small & Midsize Businesses</p>
         
 
 <div style="margin-top: 3rem; text-align: center;">
@@ -184,7 +186,7 @@
   </header>
 
   
-<section id="about">
+<section id="about" data-aos="fade-up">
   <h2>About Us</h2>
   <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem;">
     <img src="headshot.jpg" alt="James Oosterhouse" class="headshot" style="max-width: 150px;" />
@@ -196,31 +198,25 @@
 </section>
 
 
-  
-
-  
-
-<section id="workflow">
-  <h2>AI Workflow</h2>
-  <p style="text-align: center;">Our process simplifies complex automation into three key phases:</p>
-  <div class="card-grid" style="margin-top: 2rem;">
-    <div class="card">
-      <h3>1. Discover & Audit</h3>
-      <p>We learn your unique business needs and assess current workflows to identify high-ROI AI opportunities.</p>
+  <section id="services">
+    <h2>Services</h2>
+    <div class="card-grid">
+      <div class="card" data-aos="zoom-in">
+        <h3>AI Audit</h3>
+        <p>We evaluate your current workflows to find where AI and automation can create the most value.</p>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <h3>AI Training</h3>
+        <p>We deliver hands-on training and tools that help your team integrate AI into their everyday work.</p>
+      </div>
+      <div class="card" data-aos="zoom-in">
+        <h3>Workflow Automation</h3>
+        <p>We build intelligent systems that automate complex, repeatable tasks like quoting, follow-ups, and review pipelines.</p>
+      </div>
     </div>
-    <div class="card">
-      <h3>2. Training</h3>
-      <p>Your team gets hands-on training with real tools and safe testbeds.</p>
-    </div>
-    <div class="card">
-      <h3>3. Automation</h3>
-      <p>We deploy custom AI-powered workflows to streamline your operations.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-
-<section id="contact">
+  <section id="contact" data-aos="fade-up">
     <h2>Contact</h2>
     <form action="https://formspree.io/f/mwpqbdzb" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
