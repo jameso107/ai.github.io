@@ -162,19 +162,14 @@
       to {opacity: 1; transform: scale(1);}
     }
   
-.parallax {
-  background-image: url('waves.mov');
-  min-height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 
 </style>
 </head>
 <body>
-  <div class="parallax"></div>
+  <video autoplay muted loop class="video-background">
+    <source src="waves.mov" type="video/mp4">
+  </video>
 
   <header>
     <h1>The House of AI</h1>
@@ -201,43 +196,24 @@
 </section>
 
 
-  <section id="services">
-    <h2>Services</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>AI Audit</h3>
-        <p>We evaluate your current workflows to find where AI and automation can create the most value.</p>
-      </div>
-      <div class="card">
-        <h3>AI Training</h3>
-        <p>We deliver hands-on training and tools that help your team integrate AI into their everyday work.</p>
-      </div>
-      <div class="card">
-        <h3>Workflow Automation</h3>
-        <p>We build intelligent systems that automate complex, repeatable tasks like quoting, follow-ups, and review pipelines.</p>
-      </div>
-    </div>
-  </section>
+  
 
   
+
 <section id="workflow">
   <h2>AI Workflow</h2>
-  <p style="text-align: center;">Our process simplifies complex automation into four key phases:</p>
+  <p style="text-align: center;">Our process simplifies complex automation into three key phases:</p>
   <div class="card-grid" style="margin-top: 2rem;">
     <div class="card">
-      <h3>1. Discovery</h3>
-      <p>We learn your unique business needs and identify AI opportunities.</p>
+      <h3>1. Discover & Audit</h3>
+      <p>We learn your unique business needs and assess current workflows to identify high-ROI AI opportunities.</p>
     </div>
     <div class="card">
-      <h3>2. Audit</h3>
-      <p>We assess current workflows and systems to pinpoint high-ROI tasks.</p>
-    </div>
-    <div class="card">
-      <h3>3. Training</h3>
+      <h3>2. Training</h3>
       <p>Your team gets hands-on training with real tools and safe testbeds.</p>
     </div>
     <div class="card">
-      <h3>4. Automation</h3>
+      <h3>3. Automation</h3>
       <p>We deploy custom AI-powered workflows to streamline your operations.</p>
     </div>
   </div>
