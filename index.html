@@ -6,6 +6,7 @@
   <title>The Syzygy Group</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
+
     * {margin:0;padding:0;box-sizing:border-box;}
     body {
       font-family: 'Inter', sans-serif;
@@ -30,10 +31,10 @@
       z-index: 1;
     }
     header h1 {
-      font-size: 3rem;
+      font-size: 6rem;
       margin: 0;
-      color: #8a63d2;
-    }
+      color: #8a63d2  margin-bottom: 1.5rem;;
+      margin-bottom: 1.5rem;}
     header p {
       font-size: 1.2rem;
       margin-top: 1rem;
@@ -145,7 +146,23 @@
       from {opacity: 0; transform: scale(0.5);}
       to {opacity: 1; transform: scale(1);}
     }
-  </style>
+  
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #7b2ff7, #f107a3, #7b2ff7, #f107a3);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 6s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+</style>
 
   
   
@@ -161,7 +178,7 @@
   </video>
 
   <header>
-    <h1>The Syzygy Group</h1>
+    <h1><span class="gradient-text animated-gradient" style="font-size: 5.5rem; line-height: 1.3;">The Syzygy Group</span></h1>
     <p>Aligning AI, Strategy, and Your Business</p>
         
 
