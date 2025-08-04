@@ -9,6 +9,8 @@
   <style>
 
 
+
+
     * {margin:0;padding:0;box-sizing:border-box;}
     body {
       font-family: 'Inter', sans-serif;
@@ -206,6 +208,69 @@
   50% { opacity: 1; transform: translateY(-5px); }
 }
 
+
+
+.animated-gradient-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(270deg, #5f4b8b, #9b59b6, #ffd700, #5f4b8b);
+  background-size: 600% 600%;
+  animation: gradientShift 8s ease infinite;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.animated-gradient-button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+  100% { background-position: 0% 50%; }
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+.animated-gradient-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(270deg, #5f4b8b, #9b59b6, #ffd700, #5f4b8b);
+  background-size: 600% 600%;
+  animation: gradientShift 8s ease infinite;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.animated-gradient-button:hover {
+  transform: scale(1.05);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+  100% { background-position: 0% 50%; }
+}
+
 </style>
 
   
@@ -271,17 +336,23 @@
   </section>
 
   <section id="contact" >
-    <h2>Contact</h2>
-    <form action="https://formspree.io/f/mwpqbdzb" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <h2>Contact us for a free 30-minute consultation!</h2>
+    
+    
+
+<div style="text-align:center; margin: 40px 0;">
+  <a href="https://calendly.com/jamesoo-umich" target="_blank" class="animated-gradient-button">
+    Schedule Now
+  </a>
+</div>
+
+
+    
+    
     <p style="margin-top:1rem;">Or reach out directly:<br>
-      Email: <a href="mailto:jamesoo@umich.edu">jamesoo@umich.edu</a><br>
-      Phone: <a href="tel:+16164030259">(616) 403-0259</a>
+      Call: <a href="tel:+16164030259">(616) 403-0259</a>
     </p>
+    
   </section>
 
   <footer>
